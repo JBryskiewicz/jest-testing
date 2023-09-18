@@ -1,19 +1,21 @@
 import { render, screen } from '@testing-library/react';
-import {Example} from "./Example";
+import {Example} from "../Example";
 
 /**
   * Example should render the text hello and if name is passed into the component
   * it should also render this name right after word hello
   */
+describe("Example", () => {
 
-  test('Example renders correctly', () => {
+  it('component renders correctly', () => {
     render(<Example/>);
     const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
   })
 
-  test('Example renders with passed name', () => {
+  it('component renders with passed name', () => {
     render(<Example name="Placeholder" />);
     const textElement = screen.getByText("Hello Placeholder");
     expect(textElement).toBeInTheDocument();
   })
+})
