@@ -2,7 +2,7 @@ import {Application} from "../Application";
 import {render, screen} from "@testing-library/react";
 
 describe('Application', () => {
-    it('render correctly', () => {
+    it('renders headings correctly', () => {
         render(<Application/>);
 
         const pageHeading = screen.getByRole('heading', {
@@ -14,6 +14,10 @@ describe('Application', () => {
             level: 2,
         });
         expect(sectionHeading).toBeInTheDocument();
+    });
+
+    it('renders inputs correctly', () => {
+        render(<Application/>);
 
         const textBoxElement = screen.getByRole('textbox', {
             name: 'Name',
@@ -30,6 +34,10 @@ describe('Application', () => {
 
         const termsElement = screen.getByRole('checkbox');
         expect(termsElement).toBeInTheDocument();
+    });
+
+    it('renders buttons correctly', () => {
+        render(<Application/>);
 
         const submitElement = screen.getByRole('button');
         expect(submitElement).toBeInTheDocument();
