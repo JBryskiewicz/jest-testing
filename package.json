@@ -48,6 +48,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/TDD/**",
+      "src/hooks/use-counter/**",
       "src/App.tsx"
     ]
   }
