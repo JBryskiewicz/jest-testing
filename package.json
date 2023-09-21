@@ -51,5 +51,8 @@
       "src/hooks/use-counter/**",
       "src/App.tsx"
     ]
+  },
+  "devDependencies": {
+    "msw": "^1.3.1"
   }
 }
